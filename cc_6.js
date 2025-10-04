@@ -6,10 +6,11 @@ class Employee {
     }
 
     describe() {
-        return `${this.name} works in ${this.department}`;
+        return `${this.name} works in the ${this.department} department`;
     }
 }
 
+// Manager Class
 class Manager extends Employee {
     constructor(name, dept, teamSize) {
         super(name, dept);
@@ -17,6 +18,16 @@ class Manager extends Employee {
     }
 
     describe() {
-        return `${this.name} manages ${this.teamSize} people in ${this.department}`;
+        return `${this.name} manages ${this.teamSize} people in the ${this.department} department`;
     }
 }
+
+// Employees and Managers
+
+const emp1 = new Employee("Jimmy John", "Sandwich")
+const emp2 = new Employee("Papa John", "Pizza")
+const emp3 = new Employee("Colonel Sanders", "Chicken")
+
+const man1 = new Manager("Cletus Lyle", "Finance", 20)
+const man2 = new Manager("Chad Gideon", "Athletic", 5)
+const man3 = new Manager("Gordon Hadley", "Culinary", 100)
